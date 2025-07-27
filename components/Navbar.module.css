@@ -1,0 +1,129 @@
+/* Style dasar untuk navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem 2rem;
+  z-index: 1000;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  /* Efek Glassmorphism dan border DIHAPUS dari sini
+    agar navbar jadi transparan saat di paling atas.
+  */
+}
+
+/* Style saat navbar di-scroll (menyusut jadi kapsul) */
+.navbar.scrolled {
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  
+  /* Efek Glassmorphism DITARUH DI SINI */
+  background: rgba(37, 39, 42, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.navContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo a {
+
+  color: white;
+  text-decoration: none;
+}
+
+/* Menu Desktop */
+.desktopMenu {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.desktopMenu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.desktopMenu a:hover {
+  color: #a7a7a7;
+}
+
+/* Tombol Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+/* Menu Mobile Overlay */
+.mobileMenu {
+  display: none;
+}
+
+/* Tampilan untuk Mobile */
+@media (max-width: 768px) {
+  .desktopMenu {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .navbar {
+    padding: 1rem 1.5rem;
+  }
+  .navbar.scrolled {
+    padding: 0.5rem 1.5rem;
+  }
+  .mobileMenu {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .mobileMenu ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+  }
+  .mobileMenu li {
+    margin: 2rem 0;
+  }
+  .mobileMenu a {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,34 @@
+/* components/CurvedLoop.css */
+
+/* Style untuk pembungkus utama */
+.curved-loop-jacket {
+  /* min-height, display, align-items, justify-content DIHAPUS */
+  width: 100%;
+  padding: 4rem 0; /* Beri jarak atas-bawah agar tidak terlalu mepet */
+  background-color: #000; /* Samakan dengan background website-mu */
+  overflow: hidden; /* Agar tidak ada horizontal scroll */
+}
+
+/* Style untuk SVG dan teks melengkung */
+.curved-loop-svg {
+  user-select: none;
+  width: 100%;
+  aspect-ratio: 100 / 12;
+  overflow: visible;
+  display: block;
+  font-size: 5rem; /* Ukuran font untuk desktop */
+  fill: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+/* Tambahkan ini agar responsif di mobile */
+@media (max-width: 768px) {
+  .curved-loop-jacket {
+    padding: 3rem 0;
+  }
+  .curved-loop-svg {
+    font-size: 2.5rem; /* Kecilkan font di HP */
+  }
+}

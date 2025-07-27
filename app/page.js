@@ -2,6 +2,7 @@
 import Hero from '@/components/Hero';
 import Navbar from '@/components/Navbar';
 import CurvedLoop from '@/components/CurvedLoop';
+import AboutSection from '@/components/AboutSection';
 
 export default function HomePage() {
   return (
@@ -14,9 +15,7 @@ export default function HomePage() {
         curveAmount={100} // Atur tingkat kelengkungan di sini
         interactive={true}
       />
-      <div id="project" style={{ height: '100vh', backgroundColor: '#111', color: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-        <h2>Project Section</h2>
-      </div>
+      <AboutSection />
       <div id="contact" style={{ height: '100vh', backgroundColor: '#000', color: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         <h2>Contact Section</h2>
       </div>

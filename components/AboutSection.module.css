@@ -1,0 +1,67 @@
+.aboutSection {
+  min-height: 100vh;
+  width: 100%;
+  padding: 6rem 2rem;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.aboutContainer {
+  display: flex;
+  align-items: center;
+  gap: 4rem; /* Jarak antara kolom kiri dan kanan */
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Kolom kiri untuk teks */
+.leftColumn {
+  flex: 1; /* Mengambil sisa ruang yang tersedia */
+  color: white;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(90deg, #c137ff, #07c6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.description {
+  font-size: 1.125rem;
+  color: #c7c7c7;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+/* Kolom kanan untuk ProfileCard */
+.rightColumn {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Aturan untuk tampilan mobile */
+@media (max-width: 900px) {
+  .aboutContainer {
+    flex-direction: column; /* Ubah layout jadi vertikal */
+    gap: 3rem;
+  }
+  .leftColumn {
+    text-align: center; /* Ratakan teks di tengah */
+  }
+  .title {
+    font-size: 2.5rem;
+  }
+  .description {
+    font-size: 1rem;
+  }
+}

@@ -22,7 +22,7 @@
   border-radius: 9999px;
   
   /* Efek Glassmorphism DITARUH DI SINI */
-  background: rgba(37, 39, 42, 0.7);
+  background: rgba(62, 62, 62, 0.256);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -85,7 +85,7 @@
 }
 
 /* Tampilan untuk Mobile */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .desktopMenu {
     display: none;
   }
@@ -93,11 +93,13 @@
     display: flex;
   }
   .navbar {
-    padding: 1rem 1.5rem;
+    padding: 0.4rem 1rem;
   }
   .navbar.scrolled {
-    padding: 0.5rem 1.5rem;
-  }
+  width: 300px; /* Biarkan lebarnya otomatis */
+  max-width: 98%; /* TAPI, batasi lebar maksimalnya 90% dari layar */
+  padding: 0.6rem 1.5rem; /* Padding kiri-kanan kita pangkas lagi */
+}
   .mobileMenu {
     display: flex;
     position: fixed;

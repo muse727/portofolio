@@ -27,15 +27,11 @@
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
-  background: linear-gradient(90deg, #c137ff, #07c6ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
+  
 }
 
 .description {
-  font-size: 1.125rem;
+  font-size: 0.8rem;
   color: #c7c7c7;
   line-height: 1.8;
   margin-bottom: 1rem;
